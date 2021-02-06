@@ -1,6 +1,6 @@
 #importing appropriate libraries
-from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
-import matplotlib.pyplot as plt
+# from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+# import matplotlib.pyplot as plt
 import streamlit as st
 import spacy
 import en_core_web_sm
@@ -8,25 +8,25 @@ import pandas as pd
 from PIL import Image
 from modules.scrape import *
 from textblob import TextBlob
-from matplotlib.backends.backend_agg import RendererAgg
-_lock = RendererAgg.lock
+# from matplotlib.backends.backend_agg import RendererAgg
+# _lock = RendererAgg.lock
 
 
 
-
-def get_wordcloud(text):
-    '''
-    This method creates the visually beautiful wordcloud using the words from the corpus.
-    Most frequent word (after removing stop words), gets bigger in the wordcloud
-    '''
-    wordcloud = WordCloud(max_font_size=200,width=1200, height=600, max_words=100, random_state =101,
-                          stopwords=set(STOPWORDS),background_color="white").generate(text)
-    with _lock:
-        plt.figure()
-        plt.imshow(wordcloud, interpolation="bilinear")
-        plt.axis("off")
-        plt.show()
-        st.pyplot()
+# 
+# def get_wordcloud(text):
+#     '''
+#     This method creates the visually beautiful wordcloud using the words from the corpus.
+#     Most frequent word (after removing stop words), gets bigger in the wordcloud
+#     '''
+#     wordcloud = WordCloud(max_font_size=200,width=1200, height=600, max_words=100, random_state =101,
+#                           stopwords=set(STOPWORDS),background_color="white").generate(text)
+#     with _lock:
+#         plt.figure()
+#         plt.imshow(wordcloud, interpolation="bilinear")
+#         plt.axis("off")
+#         plt.show()
+#         st.pyplot()
 
 @st.cache
 #We use cache in streamlit so that once the website loads, all data is stored in cache so next refresh will be fast with data access and data loading tasks
