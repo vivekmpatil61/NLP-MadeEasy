@@ -39,14 +39,13 @@ def main():
     st.sidebar.title("About")
     st.sidebar.info(
         '''
-        This app is developed solely for etertainnment purpose in the Hashnode Hackathon Powered by Vercel! I believe this app will motivate many Data Science enthusiasts to start working in NLP domain and they'll contribute more to this solution.''')
+        This app is developed solely for etertainnment purpose. I believe this app will motivate many Data Science enthusiasts to start working in NLP domain and they'll contribute more to this solution.''')
     st.sidebar.title("Contact")
     st.sidebar.markdown(
         '''
         This app is developed by [Vivek Patil](https://www.linkedin.com/in/vivekmpatil/).
         ''')
-    st.sidebar.code('''Crafted with ❤ at Hashnode
-  and powered by Vercel''')
+    st.sidebar.text('''Crafted with ❤ from India''')
 
 
 
