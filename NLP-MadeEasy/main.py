@@ -9,6 +9,8 @@ import modules.translate
 import modules.textSummarization
 import modules.sentiment
 from PIL import Image
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 
 #pages in the web app
 Modules = {
