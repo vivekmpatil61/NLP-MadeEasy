@@ -8,6 +8,8 @@ import pandas as pd
 from PIL import Image
 from modules.scrape import *
 from textblob import TextBlob
+from matplotlib.backends.backend_agg import RendererAgg
+_lock = RendererAgg.lock
 
 
 
@@ -19,11 +21,12 @@ def get_wordcloud(text):
     '''
     wordcloud = WordCloud(max_font_size=200,width=1200, height=600, max_words=100, random_state =101,
                           stopwords=set(STOPWORDS),background_color="white").generate(text)
-    plt.figure()
-    plt.imshow(wordcloud, interpolation="bilinear")
-    plt.axis("off")
-    plt.show()
-    st.pyplot()
+    with _lock:
+        plt.figure()
+        plt.imshow(wordcloud, interpolation="bilinear")
+        plt.axis("off")
+        plt.show()
+        st.pyplot()
 
 @st.cache
 #We use cache in streamlit so that once the website loads, all data is stored in cache so next refresh will be fast with data access and data loading tasks
