@@ -2,7 +2,7 @@ nltk==3.4.4
 httpx==0.13.3
 pandas==0.25.1
 streamlit==0.76.0
-wordcloud==1.7.0
+wordcloud==1.6.0
 sumy==0.8.1
 httpcore==0.9.1
 fuzzywuzzy==0.18.0
