@@ -22,14 +22,14 @@ Modules = {
 
 def main():
     #WebApp main image
-    st.image('NLP.png',width=700)
+    st.image('Images/NLP.png',width=700)
 
     #sidebar design
     st.sidebar.title("NLP MadeEasy")
     st.sidebar.text("Natural Language Processing Toolkit")
 
     st.sidebar.title("Navigation")
-    selection = st.sidebar.radio("Go to",list(Modules.keys()))  #Selecting page to be opened using radio button 
+    selection = st.sidebar.radio("Go to",list(Modules.keys()))  #Selecting page to be opened using radio button
 
     page = Modules[selection]
     page.main()
