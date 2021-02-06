@@ -1,8 +1,8 @@
 #importing appropriate libraries
-
-import streamlit as st
-from bs4 import BeautifulSoup
-from urllib.request import urlopen
+# 
+# import streamlit as st
+# from bs4 import BeautifulSoup
+# from urllib.request import urlopen
 
 # Fetch Text From Url
 #Future Enhancement - Curretly not used in program due to time costraints
