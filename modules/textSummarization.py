@@ -8,7 +8,6 @@ from sumy.summarizers.lex_rank import LexRankSummarizer
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 stop_words = set(stopwords.words('english'))
-import openpyxl
 import re
 import copy
 import readtime
