@@ -1,4 +1,3 @@
-
 import streamlit as st
 from gensim.summarization.summarizer import summarize
 import sumy
@@ -7,12 +6,14 @@ from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-stop_words = set(stopwords.words('english'))
 import re
+
 import copy
 import readtime
 from difflib import SequenceMatcher
 import readtime
+stop_words = set(stopwords.words('english'))
+
 
 def sumy_summarizer(docx):
 	parser = PlaintextParser.from_string(docx, Tokenizer("english"))
